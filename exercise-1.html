@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        h2{color: blue;}
-        button{margin-left: 120px;}
-        input{margin-bottom:20px;}
-        h3{font-style: italic}
+        h2 {
+            color: blue;
+        }
+
+        button {
+            margin-left: 120px;
+        }
+
+        input {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-style: italic
+        }
     </style>
 </head>
 <body>
@@ -20,11 +31,18 @@
 <h3 id="result"></h3>
 
 <script>
-    function getdata(){
-        let a=document.getElementById('a').value;
-        let b=document.getElementById('b').value;
-        if(a%b===0){document.getElementById('result').innerHTML='a is divisible b'}else{document.getElementById('result').innerHTML='a is not divisible b'}
-
+    function getdata() {
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        if (b === 0) {
+            document.getElementById('result').innerHTML = 'mau so phai khac khong'
+        } else {
+            if (a % b === 0) {
+                document.getElementById('result').innerHTML = a + ' is divisible ' + b
+            } else {
+                document.getElementById('result').innerHTML = a + ' is not divisible ' + b
+            }
+        }
     }
 </script>
 </body>
